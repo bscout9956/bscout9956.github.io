@@ -11,7 +11,11 @@
     <script type="importmap">
 		{"imports": {"leaflet": "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.2/dist/leaflet.js"}}
 	</script>
+
+    <!-- Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom Shit-->
     <script src="./utils.js"></script>
     <link rel="stylesheet" href="./style.css" />
 </head>
@@ -22,8 +26,24 @@
 
 <body>
     <script type="module" src="./main.js"></script>
-    <header class="gta-font">Made by: blackscout</header>
-    <div class="container">
+    <header class="gta-font">
+        <span>Made by: <span class="header-name" onclick="ghRedirect()"> blackscout</span></span>
+
+        <i class="bi bi-question-circle about-info">
+            <div class="about-info-text">
+                <div>This webpage is a countdown for the PC version of GTA VI.</div>
+                <br>
+                <div class="secondary-text">It features a fun interactive way of visualizing how long along the wait
+                    we've progressed.
+                </div>
+                <br>
+                <div class="secondary-text">We
+                    start
+                    on the release date for the console version (Nov 19 2026) and end on the release date (Feb 15
+                    2027).</div>
+            </div>
+        </i>
+    </header>
         <div class="progress-control-container">
             <div class="progress-control gta-font">
                 <h1>PC Release Countdown</h1>
