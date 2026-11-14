@@ -76,7 +76,11 @@ function updateProgress() {
         track = "Tangerine Dreams - Los Santos City Map";
     }
 
-    nowPlaying.innerText = `Now Playing: ${track}`;
+    if (bgMusic.paused) {
+        nowPlaying.innerText = `No Music Playing`;
+    } else {
+        nowPlaying.innerText = `Now Playing: ${track}`;
+    }
 
     daysLeftCount = (pcDate - now) / (1000 * 60 * 60 * 24);
 
