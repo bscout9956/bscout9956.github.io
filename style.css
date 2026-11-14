@@ -77,7 +77,7 @@ header {
 }
 
 .vi-car-style {
-    color: #f5a6c8;
+    color: hsl(334, 80%, 81%);
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
