@@ -7,8 +7,8 @@ const mapOptions = {
     zoomControl: false
 }
 
-const pcDate = new Date(2027, 1, 15, 12, 0); // Index 1 for February
-const releaseDate = new Date(2026, 10, 19, 0, 0); // Index 10 for November
+const pcDate = new Date(Date.UTC(2027, 1, 15, 0, 0)); // Index 1 for February
+const releaseDate = new Date(Date.UTC(2026, 10, 19, 0, 0)); // Index 10 for November
 let speed;
 let prevPosition;
 
