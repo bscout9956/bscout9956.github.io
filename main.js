@@ -85,7 +85,6 @@ function updateProgress() {
     daysLeftCount = (pcDate - now) / (1000 * 60 * 60 * 24);
 
     const daysRemainingEl = document.querySelector("#days-remaining");
-    daysRemainingEl.innerText = `${Math.floor(daysLeftCount)} days left...`;
 
     // We handle if the start date is in the future.
     daysLeftUi = (daysLeftCount > totalDayCount) ? totalDayCount : daysLeftCount;
@@ -103,10 +102,18 @@ function updateProgress() {
     prevPosition = curDistance;
 
     const distanceProgress = document.querySelector("#distance-progress");
-    distanceProgress.innerText = `${curDistance.toFixed(2)}m out of ${totalDistance.toFixed(2)} meters...`
 
     const travelSpeed = document.querySelector("#travel-speed");
-    travelSpeed.innerText = `We're traveling at ${speed.toFixed(2)} km/h`
+
+    if (percentage == 1) {
+        travelSpeed.innerText = `We have arrived!`;
+        distanceProgress.innerText = `We've gotten there! After ${totalDistance.toFixed(2)} meters!`
+        daysRemainingEl.innerText = `It's OUT now!`;
+    } else {
+        travelSpeed.innerText = `We're traveling at ${speed.toFixed(2)} km/h`;
+        distanceProgress.innerText = `${curDistance.toFixed(2)}m out of ${totalDistance.toFixed(2)} meters...`
+        daysRemainingEl.innerText = `${Math.floor(daysLeftCount)} days left...`;
+    }
 
     setCarMarker();
 }
